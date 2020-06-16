@@ -1,0 +1,1229 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/globle.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <title>共同见证辉煌中国70年</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        html {
+            font-size: 20px;
+        }
+        
+        @media only screen and (min-width: 401px) {
+            html {
+                font-size: 25px !important;
+            }
+        }
+        
+        @media only screen and (min-width: 428px) {
+            html {
+                font-size: 26.75px !important;
+            }
+        }
+        
+        @media only screen and (min-width: 481px) {
+            html {
+                font-size: 30px !important;
+            }
+        }
+        
+        @media only screen and (min-width: 569px) {
+            html {
+                font-size: 35px !important;
+            }
+        }
+        
+        @media only screen and (min-width: 641px) {
+            html {
+                font-size: 40px !important;
+            }
+        }
+        
+        body {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            /* overflow: hidden; */
+        }
+        
+        section {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            color: white;
+            transition: transform 2s ease-in-out;
+        }
+        
+        .jieshao1 img,
+        .section1-img,
+        .section2-img,
+        .section3-img {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        
+        .xj1 img {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        
+        .section1 button {
+            font-size: 0.6rem;
+            left: 50%;
+            margin-left: -3.5rem;
+            background-size: 100% 100%;
+            width: 6rem;
+            height: 2.5rem;
+            border-radius: 3rem;
+            -webkit-tap-highlight-color: transparent;
+            text-align: center;
+            cursor: pointer;
+            position: fixed;
+            bottom: 40%;
+            color: white;
+            /* opacity: 0; */
+            background-color: #eb6152;
+            box-shadow: 0 0 6px 4px #71d3e7;
+            /* animation: sectionText 3s infinite; */
+            animation-delay: 0s;
+            animation-duration: 4s !important;
+        }
+        
+        @keyframes sectionText {
+            0% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.3;
+            }
+        }
+        
+        @keyframes sectionSpan {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        .test {
+            height: 16rem;
+            width: 24rem;
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            margin-left: -12rem;
+            transition: all 2s ease-in-out;
+            transition-delay: 1s;
+            text-align: center;
+        }
+        
+        .test1 {
+            background: url('./images/test1.png');
+            background-size: 100% 100%;
+        }
+        
+        .test2 {
+            background: url('./images/test2.png');
+            background-size: 100% 100%;
+        }
+        
+        .test3 {
+            background: url('./images/test3.png');
+            background-size: 100% 100%;
+        }
+        
+        .test4 {
+            background: url('./images/test4.png');
+            background-size: 100% 100%;
+        }
+        
+        .test5 {
+            background: url('./images/test5.png');
+            background-size: 100% 100%;
+        }
+        
+        .test6 {
+            background: url('./images/test6.png');
+            background-size: 100% 100%;
+        }
+        
+        .test7 {
+            background: url('./images/test7.png');
+            background-size: 100% 100%;
+        }
+        
+        .test8 {
+            background: url('./images/test8.png');
+            background-size: 100% 100%;
+        }
+        
+        .tam,
+        .yzd,
+        .section4-img,
+        .section5-img,
+        .section6-img,
+        .section7-img,
+        .section8-img,
+        .section9-img {
+            transition: filter 0.8s ease-in-out;
+        }
+        
+        .test-div {
+            position: relative;
+            font-size: 0.9rem;
+            padding: 0.25rem;
+            background-color: wheat;
+            width: 70%;
+            margin-left: 15%;
+            margin-top: 0.4rem;
+            border-radius: 0.1rem;
+            color: rgb(36, 36, 36);
+            cursor: pointer;
+        }
+        
+        .test-div img {
+            opacity: 0;
+            position: absolute;
+            right: 0.2rem;
+            top: 50%;
+            margin-top: -0.5rem;
+            height: 1rem;
+            width: 1rem;
+        }
+        
+        .jieshao1,
+        .jieshao2,
+        .jieshao3,
+        .jieshao4,
+        .jieshao5,
+        .jieshao6,
+        .jieshao7,
+        .jieshao8 {
+            background: url('./images/bg.png');
+            background-size: 100% 100%;
+        }
+        
+        .jieshao-div {
+            position: fixed;
+            height: 10rem;
+            width: 20rem;
+            top: 2rem;
+            left: 50%;
+            margin-left: -10rem;
+            text-align: center;
+            z-index: 99;
+            background: url('./images/jieshao.png');
+            background-size: 100% 100%;
+        }
+        
+        .jieshao-p {
+            font-size: 0.6rem;
+            text-align: center;
+            margin-top: 2.5rem;
+            height: 0.6rem;
+            line-height: 0.8rem;
+            font-family: simfang;
+        }
+        
+        .jieshao-p span:nth-of-type(1) {
+            opacity: 0;
+            animation: sectionSpan 2s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards
+        }
+        
+        .jieshao-p span:nth-of-type(2) {
+            opacity: 0;
+            animation: sectionSpan 2s;
+            animation-delay: 4s;
+            animation-fill-mode: forwards
+        }
+        
+        .jieshao-p span:nth-of-type(3) {
+            opacity: 0;
+            animation: sectionSpan 2s;
+            animation-delay: 6s;
+            animation-fill-mode: forwards
+        }
+        
+        .jieshao-p span:nth-of-type(4) {
+            opacity: 0;
+            animation: sectionSpan 2s;
+            animation-delay: 8s;
+            animation-fill-mode: forwards
+        }
+        
+        .btn2,
+        .btn3,
+        .btn4,
+        .btn5,
+        .btn6,
+        .btn7,
+        .btn8,
+        .btn9 {
+            position: fixed;
+            bottom: 1rem;
+            opacity: 0;
+            /* animation: sectionSpan 2s; */
+            animation-delay: 10s !important;
+            animation-duration: 4s !important;
+            animation-fill-mode: forwards;
+            font-size: 0.7rem;
+            padding: 5px;
+            color: white;
+            border-radius: 3rem;
+            background-color: #e36f37;
+            box-shadow: 0 0 1px 2px #f6f6f6;
+            background-size: 100% 100%;
+            left: 50%;
+            width: 6rem;
+            height: 2rem;
+            margin-left: -3.5rem;
+        }
+        
+        .section1-header {
+            font-size: 1rem;
+            margin-top: 1rem;
+            color: rgb(238, 238, 238);
+        }
+        
+        .jieshao1 img,
+        .jieshao2 img,
+        .yzd {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        
+        .music-img {
+            position: fixed;
+            padding: 0.8rem;
+            height: 1.5rem;
+            width: 1.5rem;
+            z-index: 999;
+            animation: xuanzhuan 2s linear infinite;
+        }
+        
+        .dataNums {
+            position: absolute;
+            right: 0;
+            margin-right: -0.5rem;
+            top: 0;
+            margin-top: 0.5rem;
+            z-index: 99;
+            height: 1.875rem;
+            width: 10rem !important;
+        }
+        
+        .dataNums .dataOne {
+            width: 1.875rem;
+            height: 1.875rem;
+            margin: 0rem 0.075rem;
+            text-align: center;
+            background: url(./images/num-bg.png) no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        .dataNums .tt span {
+            font: bold 1.35rem/1.875rem "Arial";
+        }
+        
+        .inrow>li {
+            font-size: 0.35rem;
+        }
+        
+        .notclick {
+            pointer-events: none;
+        }
+        
+        @keyframes xuanzhuan {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @media screen and (orientation:portrait) {
+            /*竖屏样式*/
+            body {
+                transform-origin: 0 0;
+                transform: rotateZ(90deg) translateY(-100%);
+            }
+        }
+        
+        .bounceIn {
+            animation-delay: 1s;
+        }
+        
+        #preload-01 {
+            background: url('images/dfh.gif') no-repeat -9999px -9999px;
+        }
+        
+        #preload-02 {
+            background: url('images/ty.gif') no-repeat -9999px -9999px;
+        }
+        
+        #preload-03 {
+            background: url('images/jlh.gif') no-repeat -9999px -9999px;
+        }
+        
+        .progress,
+        .progress-bar,
+        .sr-only {
+            height: 0.5rem;
+            font-size: 0;
+            line-height: 0
+        }
+        
+        .progress {
+            position: fixed;
+            overflow: hidden;
+            width: 60%;
+            margin-left: 20%;
+            top: 50%;
+            -khtml-border-radius: 6px;
+            -ms-border-radius: 6px;
+            -o-border-radius: 6px;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            border-radius: 6px
+        }
+        
+        .progress-bar {
+            width: 100%;
+            background-color: #efefef
+        }
+        
+        .sr-only {
+            display: inline-block;
+            background-color: #58b957;
+            transition: width 0.5s linear;
+        }
+        
+        .loading {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(#49b4eb, #fadeab);
+        }
+        
+        .loading p {
+            position: fixed;
+            font-size: 0.6rem;
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            top: 42%;
+            color: white;
+        }
+        
+        @font-face {
+            font-family: 'simfang';
+            src: url('./fonts/simfang.ttf');
+        }
+        
+        .end-img {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        
+        .qishi {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            margin-left: -5rem;
+            height: 8.65rem;
+            width: 10rem;
+            z-index: 99;
+        }
+        
+        .end div {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            bottom: 1rem;
+            width: 60%;
+            margin-left: 20%;
+            font-size: 0.6rem;
+            color: white;
+        }
+        
+        .end div button {
+            padding: 0.5rem;
+            font-size: 0.6rem;
+            color: white;
+            border-radius: 0.5rem;
+            /* background-color: #e36f37; */
+            /* box-shadow: 0 0 0.5px 1px #f6f6f6; */
+        }
+        
+        .end div span:nth-of-type(1) {
+            opacity: 0;
+            animation: sectionSpan 2s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards
+        }
+        
+        .end div span:nth-of-type(2) {
+            opacity: 0;
+            animation: sectionSpan 2s;
+            animation-delay: 4s;
+            animation-fill-mode: forwards
+        }
+        
+        .end div span:nth-of-type(3) {
+            opacity: 0;
+            animation: sectionSpan 2s;
+            animation-delay: 6s;
+            animation-fill-mode: forwards
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 加载页面 -->
+    <div class="loading">
+        <p>探索之旅正在加载,请稍后....</p>
+        <div class="progress">
+            <div class="progress-bar"><span class="sr-only"></span></div>
+        </div>
+    </div>
+
+    <!-- 背景音乐 -->
+    <div>
+        <img src="images/music.png" alt="" class="music-img" style="display: none;">
+        <audio src="images/bgMusic.mp3" type="audio/mpeg" style="position: absolute;opacity: 0;" id="bgm" loop></audio>
+    </div>
+
+    <!-- 交通工具音效 -->
+    <audio src="images/zxc.wav" type="audio/mpeg" style="position: absolute;opacity: 0;" id="zxc"></audio>
+    <audio src="images/hc.wav" type="audio/mpeg" style="position: absolute;opacity: 0;" id="hc"></audio>
+    <audio src="images/gt.wav" type="audio/mpeg" style="position: absolute;opacity: 0;" id="gt"></audio>
+    <audio src="images/fj.wav" type="audio/mpeg" style="position: absolute;opacity: 0;" id="fj"></audio>
+
+    <!-- 答题音效 -->
+    <audio src="images/false.wav" type="audio/mpeg" style="position: absolute;opacity: 0;" id="audio-false"></audio>
+    <audio src="images/true.wav" type="audio/mpeg" style="position: absolute;opacity: 0;" id="audio-true"></audio>
+
+    <!-- 各大事件音效 -->
+    <audio src="images/boom.wav" type="audio/mpeg" style="position: absolute;opacity: 0;" id="boom"></audio>
+    <audio src="images/sz5.wav" type="audio/mpeg" style="position: absolute;opacity: 0;" id="sz5"></audio>
+    <audio src="images/jlh.wav" type="audio/mpeg" style="position: absolute;opacity: 0;" id="jlh"></audio>
+    <audio src="images/kgdd.wav" type="audio/mpeg" style="position: absolute;opacity: 0;" id="kgdd"></audio>
+
+    <!-- 时间轴 -->
+    <div id="dataNums"></div>
+
+    <!-- 开始动画 -->
+    <section class="section1">
+        <header class="section1-header">
+            <img src="images/title.png" alt="" style="height: 6rem;" class="bounceIn animated">
+        </header>
+        <img src="" alt="" width="100%" height="100%" class="section1-img">
+        <button class="btn1 bounceIn animated infinite" style="display: none;">开始探索</button>
+    </section>
+
+    <!-- 开国大典介绍 -->
+    <section class="jieshao1">
+        <img src="" alt="" width="100%" height="100%" class="jieshao1-img">
+        <div class="jieshao-div">
+            <p class="jieshao-p">
+                <span>1949年10月1日下午3时，中华人民共和国举行开国大典</span>
+                <br>
+                <span>毛泽东在北京天安门城楼上宣告<br>中华人民共和国、中央人民政府成立了</span>
+                <br>
+                <span>中华人民共和国的成立开辟了中国历史新纪元。</span>
+                <br>
+                <span>从此，中国结束了一百多年来被侵略、被奴役的屈辱历史<br>真正成为独立自主的国家</span>
+            </p>
+        </div>
+        <button class="btn2 bounceIn animated infinite">我已经了解</button>
+    </section>
+
+    <!-- 天安门开国大典 -->
+    <section class="section2">
+        <img src="" alt="" width="100%" height="100%" class="tam section2-img">
+        <div class="test test1 bounceInDown animated" style="display: none;">
+            <div style="margin-top: 5.2rem;">
+                <div class="test-div t1" name="true">A:《前夜》<img src="images/true.png"></div>
+                <div class="test-div t1" name="false">B:《相遇》<img src="images/false.png"></div>
+                <div class="test-div t1" name="false">C:《护航》<img src="images/false.png"></div>
+                <div class="test-div t1" name="false">D:《夺冠》<img src="images/false.png"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 原子弹介绍 -->
+    <section class="jieshao2">
+        <img src="" alt="" width="100%" height="100%" class="jieshao2-img">
+        <div class="jieshao-div">
+            <p class="jieshao-p">
+                <span>&nbsp;1964年10月16日,巨大的蘑菇云在新疆罗布泊荒漠腾空而起<br>中国第一颗原子弹爆炸成功。</span>
+                <br>
+                <span>&nbsp;有力地打破了超级大国的核垄断和核讹诈<br>提高了我国的国际地位</span>
+                <br>
+                <span>&nbsp;中国人民依靠自己的力量</span>
+                <br>
+                <span>掌握了原子弹技术，打破了超级大国的核垄断！</span>
+            </p>
+        </div>
+        <button class="btn3 bounceIn animated infinite">我已经了解</button>
+    </section>
+
+    <!-- 原子弹爆炸 -->
+    <section class="section3">
+        <img src="" alt=" " width="100% " height="100% " class="yzd section3-img">
+        <div class="test test2 bounceInDown animated" style="display: none;">
+            <div style="margin-top: 5.2rem;">
+                <div class="test-div t2" name="false">A: 北京<img src="images/false.png"></div>
+                <div class="test-div t2" name="true">B: 新疆<img src="images/true.png"></div>
+                <div class="test-div t2" name="false">C: 内蒙古<img src="images/false.png"></div>
+                <div class="test-div t2" name="false">D: 湖南<img src="images/false.png"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 东方红介绍 -->
+    <section class="jieshao3">
+        <img src="" alt="" width="100%" height="100%" class="jieshao3-img">
+        <div class="jieshao-div">
+            <p class="jieshao-p">
+                <span>&nbsp;1970年4月,中国第一颗人造卫星“东方红一号”发射成功。</span>
+                <br>
+                <span>中国成为继美、苏、法、日四国之后<br>第五个能制造和发射人造卫星的国家</span>
+                <br>
+                <span>&nbsp;所有炎黄子孙都深深感受到自豪与光荣</span>
+                <br>
+                <span>中国也开始向技术更新、技术更全面、应用内容<br>更广泛的新型卫星方面开始全面进军。</span>
+            </p>
+        </div>
+        <button class="btn4 bounceIn animated infinite">我已经了解</button>
+    </section>
+
+
+
+    <!-- 东方红卫星 -->
+    <section class="section4">
+        <img src="" alt=" " width="100% " height="100% " class="section4-img">
+        <div class="test test3 bounceInDown animated" style="display: none;">
+            <div style="margin-top: 5.2rem;">
+                <div class="test-div t3" name="false">A: 墨子号<img src="images/false.png"></div>
+                <div class="test-div t3" name="false">B: 嫦娥号<img src="images/false.png"></div>
+                <div class="test-div t3" name="true">C: 东方红<img src="images/true.png"></div>
+                <div class="test-div t3" name="false">D: 长征号<img src="images/false.png"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 神州飞船介绍 -->
+    <section class="jieshao4">
+        <img src="" alt="" width="100%" height="100%" class="jieshao4-img">
+        <div class="jieshao-div">
+            <p class="jieshao-p">
+                <span>&nbsp;神舟五号是神舟号系列飞船中的第五艘<br>是中国第一艘载人飞船。</span>
+                <br>
+                <span>&nbsp;于2003年10月15日9时整从酒泉卫星发射中心发射。</span>
+                <br>
+                <span>轨道舱留轨运行半年时间<br>获得了大量的科学实验成果</span>
+                <br>
+                <span>是中国航天事业在新世纪的一座新的里程碑。</span>
+            </p>
+        </div>
+        <button class="btn5 bounceIn animated infinite">我已经了解</button>
+    </section>
+
+    <!-- 神州飞船 -->
+    <section class="section5">
+        <img src="" alt=" " width="100% " height="100% " class="section5-img">
+        <div class="test test4 bounceInDown animated" style="display: none;">
+            <div style="margin-top: 5.2rem;">
+                <div class="test-div t4" name="true">A: 杨利伟<img src="images/true.png"></div>
+                <div class="test-div t4" name="false">B: 聂海胜<img src="images/false.png"></div>
+                <div class="test-div t4" name="false">C: 邓稼先<img src="images/false.png"></div>
+                <div class="test-div t4" name="false">D: 费俊龙<img src="images/false.png"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 蛟龙号介绍 -->
+    <section class="jieshao5">
+        <img src="" alt="" width="100%" height="100%" class="jieshao5-img">
+        <div class="jieshao-div">
+            <p class="jieshao-p">
+                <span>&nbsp;蛟龙号载人潜水器是一艘由中国<br>自行设计、自主集成研制的载人潜水器</span>
+                <br>
+                <span>&nbsp;2010年5月至7月，蛟龙号载人潜水器<br>在中国南海中进行了多次下潜任务</span>
+                <br>
+                <span>&nbsp;最大下潜深度达到了7020米。</span>
+                <br>
+                <span>创造了作业类载人潜水器新的世界纪录。</span>
+            </p>
+        </div>
+        <button class="btn6 bounceIn animated infinite">我已经了解</button>
+    </section>
+
+    <!-- 蛟龙号 -->
+    <section class="section6">
+        <img src="" alt=" " width="100% " height="100% " class="section6-img">
+        <div class="test test5 bounceInDown animated" style="display: none;">
+            <div style="margin-top: 5.2rem;">
+                <div class="test-div t5" name="false">A: 钱学森<img src="images/false.png"></div>
+                <div class="test-div t5" name="false">B: 钱三强<img src="images/false.png"></div>
+                <div class="test-div t5" name="false">C: 邓稼先<img src="images/false.png"></div>
+                <div class="test-div t5" name="true">D: 胡震<img src="images/true.png"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 天眼介绍 -->
+    <section class="jieshao6">
+        <img src="" alt="" width="100%" height="100%" class="jieshao6-img">
+        <div class="jieshao-div">
+            <p class="jieshao-p">
+                <span>&nbsp;500米口径球面射电望远镜,简称FAST位于贵州省</span>
+                <br>
+                <span>&nbsp;黔南布依族苗族自治州平塘县大窝凼的喀斯特洼坑中</span>
+                <br>
+                <span>&nbsp;工程为国家重大科技基础设施<br>“天眼”工程由主动反射面系统、</span>
+                <br>
+                <span>馈源支撑系统、测量与控制系统、<br>接收机与终端及观测基地等几大部分构成。</span>
+            </p>
+        </div>
+        <button class="btn7 bounceIn animated infinite">我已经了解</button>
+    </section>
+
+    <!-- 天眼望眼镜 -->
+    <section class="section7">
+        <img src="" alt=" " width="100% " height="100% " class="section7-img">
+        <div class="test test6 bounceInDown animated" style="display: none;">
+            <div style="margin-top: 5.2rem;">
+                <div class="test-div t6" name="false">A: 浙江<img src="images/false.png"></div>
+                <div class="test-div t6" name="true">B: 贵州<img src="images/true.png"></div>
+                <div class="test-div t6" name="false">C: 北京<img src="images/false.png"></div>
+                <div class="test-div t6" name="false">D: 新疆<img src="images/false.png"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 墨子号介绍 -->
+    <section class="jieshao7">
+        <img src="" alt="" width="100%" height="100%" class="jieshao7-img">
+        <div class="jieshao-div">
+            <p class="jieshao-p">
+                <span>&nbsp;墨子号量子科学实验卫星（简称墨子号）</span>
+                <br>
+                <span>&nbsp;于2016年8月16日1时40分<br>在酒泉用长征二号丁运载火箭成功发射升空。</span>
+                <br>
+                <span>&nbsp;标志着我国空间科学研究又迈出重要一步。</span>
+                <br>
+                <span>这既意味着中国科学家率先向星地量子通信发起挑战<br>更意味着中国将领先欧美获得量子通信覆盖全球的能力。</span>
+            </p>
+        </div>
+        <button class="btn8 bounceIn animated infinite">我已经了解</button>
+    </section>
+
+    <!-- 量子卫星墨子号 -->
+    <section class="section8">
+        <img src="" alt=" " width="100% " height="100% " class="section8-img">
+        <div class="test test7 bounceInDown animated" style="display: none;">
+            <div style="margin-top: 5.2rem;">
+                <div class="test-div t7" name="false">A: 长征二号甲<img src="images/false.png"></div>
+                <div class="test-div t7" name="false">B: 长征二号乙<img src="images/false.png"></div>
+                <div class="test-div t7" name="false">C: 长征二号丙<img src="images/false.png"></div>
+                <div class="test-div t7" name="true">D: 长征二号丁<img src="images/true.png"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 建国七十周年介绍 -->
+    <section class="jieshao8">
+        <img src="" alt="" width="100%" height="100%" class="jieshao8-img">
+        <div class="jieshao-div">
+            <p class="jieshao-p">
+                <span>&nbsp;2019年10月1日是中华人民共和国成立70周年纪念日</span>
+                <br>
+                <span>&nbsp;庆祝中华人民共和国成立70周年大会于10月1日举行</span>
+                <br>
+                <span>&nbsp;举行盛大的庆祝中华人民共和国成立<br>70周年阅兵式和群众游行。</span>
+                <br>
+                <span>中共中央、国务院、中央军委颁发<br>“庆祝中华人民共和国成立70周年”纪念章。</span>
+            </p>
+        </div>
+        <button class="btn9 bounceIn animated infinite">我已经了解</button>
+    </section>
+
+    <!-- 建国七十周年 -->
+    <section class="section9">
+        <img src="" alt=" " width="100% " height="100% " class="section9-img">
+        <img src="images/zg70.png" class="zg-img" alt="" style="position: fixed;height: 100%;width: 100%;top: 0;left: 0;z-index: -1;">
+        <div class="test test8 bounceInDown animated" style="display: none;">
+            <div style="margin-top: 5.2rem;">
+                <div class="test-div t8" name="false">A: 58<img src="images/false.png"></div>
+                <div class="test-div t8" name="true">B: 59<img src="images/true.png"></div>
+                <div class="test-div t8" name="false">C: 70<img src="images/false.png"></div>
+                <div class="test-div t8" name="false">D: 108<img src="images/false.png"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 结束动画 -->
+    <section class="end">
+        <header>
+            <img src="images/title.png" alt="" class="bounceIn animated qishi">
+        </header>
+        <img src="images/bg.png" alt="" width="100%" height="100%" class="end-img">
+        <div>
+            <p>
+                <span>探索之旅未完待续..</span>
+                <br>
+                <span>神州大地繁花似锦,祖国长空乐趣如潮</span>
+                <br>
+                <span>愿祖国繁荣昌盛!</span>
+            </p>
+        </div>
+    </section>
+
+</body>
+<script type="text/javascript " src="js/jquery.min.js "></script>
+<script type="text/javascript " src="js/num.js "></script>
+<script>
+    function load(imgSrc, callback) { //加载图片函数
+        var imgs = [];
+        var c = 0;
+        for (var i = 0; i < imgSrc.length; i++) {
+            imgs[i] = new Image();
+            imgs[i].src = imgSrc[i];
+            imgs[i].onload = function() {
+                c++
+                if (callback) {
+                    callback(c, imgSrc);
+                }
+            }
+        }
+        return imgs;
+    }
+    //需要操作这里的方法
+    function imgStatus(n, imgSrc) {
+        //加载进度百分比 (加载数量 / 图片数量 * 100)
+        var loadImgNum = parseInt(parseFloat(n / imgSrc.length).toFixed(2) * 100);
+        if (loadImgNum == 100) {
+            setTimeout(() => {
+                $('.section1').fadeIn(0);
+                $('.section1-img').attr('src', 'images/first.gif');
+                $('.loading').fadeOut(200);
+            }, 1000);
+            //为自动显示下一页面按钮设置延迟
+            setTimeout(() => {
+                $('.btn1').css('display', 'block');
+            }, 6000);
+            //隐藏所有板块,显示当前板块
+        }
+
+        //做加载动画处理
+        console.log(loadImgNum);
+        var progess = loadImgNum + '%';
+        $('.progress span').css('width', progess);
+
+        //如果加载完成执行
+        if (n == imgSrc.length) {
+            console.log('ok');
+        }
+    }
+
+    //图片列表（可以替换成网络图片，图片越多效果越明显）
+    var imgList = [
+        'images/dfh.gif',
+        'images/ty.gif',
+        'images/jlh.gif',
+        'images/first.gif',
+        'images/sz5.gif',
+        'images/boom.gif',
+        'images/zxc.gif',
+        'images/zxc2.gif',
+        'images/zxc3.gif',
+        'images/zxc4.gif',
+        'images/zxc5.gif',
+        'images/zxc6.gif',
+        'images/zxc7.gif',
+        'images/zxc8.gif',
+    ];
+
+    //调用
+    load(imgList, imgStatus);
+
+    $(function() {
+        var musicFlag = true;
+        // 响应式适合移动端
+        function resize() {
+            var body = document.getElementsByTagName('body')[0];
+            var html = document.getElementsByTagName('html')[0];
+            var width = html.clientWidth;
+            var height = html.clientHeight;
+            var max = width > height ? width : height;
+            var min = width > height ? height : width;
+            body.style.width = max + "px";
+            body.style.height = min + "px";
+        }
+        resize();
+        window.addEventListener("resize", resize)
+        $('section').fadeOut(0);
+
+        $('.music-img').click(function() {
+            if (musicFlag) { //背景音乐图片点击禁用
+                $('.music-img').attr('src', 'images/Nomusic.png');
+                $('.music-img').css('animation', 'none');
+                document.getElementById('bgm').pause();
+                musicFlag = !musicFlag;
+            } else { //背景音乐图片点击取消禁用
+                $('.music-img').attr('src', 'images/music.png');
+                document.getElementById('bgm').play();
+                $('.music-img').css('animation', 'xuanzhuan 2s linear infinite');
+                musicFlag = !musicFlag;
+            }
+        })
+
+        //下一知识介绍板块触发按钮
+        $(".btn1 ").click(function() {
+            $('.music-img').fadeIn(1000);
+            document.getElementById('bgm').play();
+            //为自动显示答题框按钮设置延迟
+            setTimeout(() => {
+                $('.jieshao-div').addClass('bounce animated');
+                document.getElementById('zxc').play();
+            }, 1000);
+            $('.jieshao1-img').attr('src', 'images/zxc.gif');
+            $('.section1').fadeOut(1000);
+            $('.jieshao1').fadeIn(3000);
+            $("#dataNums").rollNumDaq({ //1949数字滚动
+                deVal: 1949
+            });
+        })
+        $('.btn2').click(function() {
+            $("#dataNums").rollNumDaq({ //1949数字滚动
+                deVal: 1949
+            });
+            setTimeout(() => {
+                $('.dataNums').fadeOut(1000); //转场特效淡入淡出
+                $('.test1').css('display', 'block');
+                $('.section2-img').css('filter', 'brightness(0.3)') //答题界面弹出时背景变灰
+            }, 4000);
+            //上一模块淡出
+            $('.jieshao1').fadeOut(1000);
+            $('.section2').fadeIn(3000);
+            $('.tam').attr('src', 'images/tam.png');
+        })
+
+        //为第二模块消失进行特效过渡处理
+        //答题音效触发代码
+        $('.t1').click(function() {
+            if ($(this).attr('name') == 'false') {
+                document.getElementById('audio-false').play();
+                $('.t1').addClass('notclick');
+            } else {
+                document.getElementById('audio-true').play();
+                $('.t1').addClass('notclick');
+            }
+            $('.t1 img').css('opacity', '1')
+            setTimeout(() => {
+                $('.section2').css('transform', 'scale(1.4)');
+                $('.section2').fadeOut(1000);
+                $('.jieshao2').fadeIn(3000);
+                $('.jieshao2-img').attr('src', 'images/zxc2.gif');
+                $('.dataNums').fadeIn(1000);
+                $("#dataNums").rollNumDaq({
+                    deVal: 1964
+                });
+            }, 2000)
+            setTimeout(() => {
+                document.getElementById('zxc').play();
+            }, 3000)
+        })
+
+        $('.btn3').click(function() {
+            setTimeout(() => {
+                $('.dataNums').fadeOut(1000);
+                $('.test2').css('display', 'block');
+                $('.section3-img').css('filter', 'brightness(0.3)')
+            }, 5000);
+            $('.jieshao2').fadeOut(1000);
+            $('.section3').fadeIn(3000);
+            $('.yzd').attr('src', 'images/boom.gif');
+            setTimeout(() => {
+                document.getElementById('boom').play();
+            }, 1500)
+        })
+
+        $('.t2').click(function() {
+            if ($(this).attr('name') == 'false') {
+                document.getElementById('audio-false').play();
+                $('.t2').addClass('notclick');
+            } else {
+                document.getElementById('audio-true').play();
+                $('.t2').addClass('notclick');
+            }
+            $('.t2 img').css('opacity', '1')
+            setTimeout(() => {
+                $('.section3').css('transform', 'scale(1.4)');
+                $('.section3').fadeOut(1000);
+                $('.jieshao3').fadeIn(3000);
+                $('.jieshao3-img').attr('src', 'images/zxc3.gif');
+                $('.dataNums').fadeIn(1000);
+                $("#dataNums").rollNumDaq({
+                    deVal: 1970
+                });
+            }, 2000)
+            setTimeout(() => {
+                document.getElementById('hc').play();
+            }, 3000)
+        })
+
+        $('.btn4').click(function() {
+            setTimeout(() => {
+                $('.dataNums').fadeOut(1000);
+                $('.test3').css('display', 'block');
+                $('.section4-img').css('filter', 'brightness(0.3)')
+            }, 6000);
+            $('.jieshao3').fadeOut(1000);
+            $('.section4').fadeIn(3000);
+            $('.section4-img').attr('src', 'images/dfh.gif');
+        })
+
+        $('.t3').click(function() {
+            if ($(this).attr('name') == 'false') {
+                document.getElementById('audio-false').play();
+                $('.t3').addClass('notclick');
+            } else {
+                document.getElementById('audio-true').play();
+                $('.t3').addClass('notclick');
+            }
+            $('.t3 img').css('opacity', '1')
+            setTimeout(() => {
+                $('.section4').css('transform', 'scale(1.4)');
+                $('.section4').fadeOut(1000);
+                $('.jieshao4').fadeIn(3000);
+                $('.jieshao4-img').attr('src', 'images/zxc4.gif');
+                $('.dataNums').fadeIn(1000);
+                $("#dataNums").rollNumDaq({
+                    deVal: 2003
+                });
+            }, 2000)
+            setTimeout(() => {
+                document.getElementById('hc').play();
+            }, 3000)
+        })
+
+
+
+        $('.btn5').click(function() {
+            setTimeout(() => {
+                $('.dataNums').fadeOut(1000);
+                $('.test4').css('display', 'block');
+                $('.section5-img').css('filter', 'brightness(0.3)')
+            }, 5000);
+            $('.jieshao4').fadeOut(1000);
+            $('.section5').fadeIn(3000);
+            $('.section5-img').attr('src', 'images/sz5.gif');
+            setTimeout(() => {
+                document.getElementById('sz5').play();
+            }, 1000)
+        })
+
+        $('.t4').click(function() {
+            if ($(this).attr('name') == 'false') {
+                document.getElementById('audio-false').play();
+                $('.t4').addClass('notclick');
+            } else {
+                document.getElementById('audio-true').play();
+                $('.t4').addClass('notclick');
+            }
+            $('.t4 img').css('opacity', '1')
+            setTimeout(() => {
+                $('.section5').css('transform', 'scale(1.4)');
+                $('.section5').fadeOut(1000);
+                $('.jieshao5').fadeIn(3000);
+                $('.jieshao5-img').attr('src', 'images/zxc5.gif');
+                $('.dataNums').fadeIn(1000);
+                $("#dataNums").rollNumDaq({
+                    deVal: 2009
+                });
+            }, 2000)
+            setTimeout(() => {
+                document.getElementById('gt').play();
+            }, 3000)
+        })
+
+        $('.btn6').click(function() {
+            setTimeout(() => {
+                $('.dataNums').fadeOut(1000);
+                $('.test5').css('display', 'block');
+                $('.section6-img').css('filter', 'brightness(0.3)')
+            }, 5000);
+            $('.jieshao5').fadeOut(1000);
+            $('.section6').fadeIn(3000);
+            $('.section6-img').attr('src', 'images/jlh.gif');
+            setTimeout(() => {
+                document.getElementById('jlh').play();
+            }, 1000)
+        })
+
+        $('.t5').click(function() {
+            if ($(this).attr('name') == 'false') {
+                document.getElementById('audio-false').play();
+                $('.t5').addClass('notclick');
+            } else {
+                document.getElementById('audio-true').play();
+                $('.t5').addClass('notclick');
+            }
+            $('.t5 img').css('opacity', '1')
+            setTimeout(() => {
+                $('.section6').css('transform', 'scale(1.4)');
+                $('.section6').fadeOut(1000);
+                $('.jieshao6').fadeIn(3000);
+                $('.jieshao6-img').attr('src', 'images/zxc6.gif');
+                $('.dataNums').fadeIn(1000);
+                $("#dataNums").rollNumDaq({
+                    deVal: 2016
+                });
+            }, 2000)
+            setTimeout(() => {
+                document.getElementById('gt').play();
+            }, 3000)
+        })
+
+        $('.btn7').click(function() {
+            setTimeout(() => {
+                $('.dataNums').fadeOut(1000);
+                $('.test6').css('display', 'block');
+                $('.section7-img').css('filter', 'brightness(0.3)')
+            }, 5000);
+            $('.jieshao6').fadeOut(1000);
+            $('.section7').fadeIn(3000);
+            $('.section7-img').attr('src', 'images/ty.gif');
+        })
+
+        $('.t6').click(function() {
+            if ($(this).attr('name') == 'false') {
+                document.getElementById('audio-false').play();
+                $('.t6').addClass('notclick');
+            } else {
+                document.getElementById('audio-true').play();
+                $('.t6').addClass('notclick');
+            }
+            $('.t6 img').css('opacity', '1')
+            setTimeout(() => {
+                $('.section7').css('transform', 'scale(1.4)');
+                $('.section7').fadeOut(1000);
+                $('.jieshao7').fadeIn(3000);
+                $('.jieshao7-img').attr('src', 'images/zxc7.gif');
+                $('.dataNums').fadeIn(1000);
+                $("#dataNums").rollNumDaq({
+                    deVal: 2016
+                });
+            }, 2000)
+            setTimeout(() => {
+                document.getElementById('fj').play();
+            }, 3000)
+        })
+
+        $('.btn8').click(function() {
+            setTimeout(() => {
+                $('.dataNums').fadeOut(1000);
+                $('.test7').css('display', 'block');
+                $('.section8-img').css('filter', 'brightness(0.3)')
+            }, 5000);
+            $('.jieshao7').fadeOut(1000);
+            $('.section8').fadeIn(3000);
+            $('.section8-img').attr('src', 'images/mzh.gif');
+        })
+
+        $('.t7').click(function() {
+            if ($(this).attr('name') == 'false') {
+                document.getElementById('audio-false').play();
+                $('.t7').addClass('notclick');
+            } else {
+                document.getElementById('audio-true').play();
+                $('.t7').addClass('notclick');
+            }
+            $('.t7 img').css('opacity', '1')
+            setTimeout(() => {
+                $('.section8').css('transform', 'scale(1.4)');
+                $('.section8').fadeOut(1000);
+                $('.jieshao8').fadeIn(3000);
+                $('.jieshao8-img').attr('src', 'images/zxc8.gif');
+                $('.dataNums').fadeIn(1000);
+                $("#dataNums").rollNumDaq({
+                    deVal: 2019
+                });
+            }, 2000)
+            setTimeout(() => {
+                document.getElementById('fj').play();
+            }, 3000)
+        })
+
+        $('.btn9').click(function() {
+            setTimeout(() => {
+                $('.dataNums').fadeOut(1000);
+                $('.test8').css('display', 'block');
+                $('.section9-img').css('filter', 'brightness(0.3)')
+                $('.zg-img').css('filter', 'brightness(0.3)')
+            }, 4500);
+            $('.jieshao8').fadeOut(1000);
+            $('.section9').fadeIn(3000);
+            $('.section9-img').attr('src', 'images/jg70.gif');
+        })
+
+        $('.t8').click(function() {
+            if ($(this).attr('name') == 'false') {
+                document.getElementById('audio-false').play();
+                $('.t8').addClass('notclick');
+            } else {
+                document.getElementById('audio-true').play();
+                $('.t8').addClass('notclick');
+            }
+            $('.t8 img').css('opacity', '1')
+            setTimeout(() => {
+                $('.music-img').css('display', 'none');
+                $('#bgm').css('display', 'none');
+                document.getElementById('bgm').pause();
+                $('.dataNums').fadeOut(1000);
+                $('.section9').css('transform', 'scale(1.4)');
+                $('.section9').fadeOut(1000);
+                $('.end').fadeIn(3000);
+            }, 2000)
+        })
+
+    })
+</script>
+
+</html>
