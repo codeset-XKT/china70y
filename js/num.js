@@ -53,11 +53,7 @@
         scroNum: function(options) {
             var number = options.deVal; //获取传入的数字
             var $num_item = $('.' + options.className).find('.tt');
-            if ($('body').height() == 360) {
-                var h = $('.dataBoc').width();
-            } else {
-                var h = $('.dataBoc')[0].getBoundingClientRect().width;
-            }
+            var h = $('.dataBoc')[0].getBoundingClientRect().width;
             $num_item.css('transition', 'all 2s ease-in-out'); //滚动动画
             var numberStr = number.toString();
             if (numberStr.length <= $num_item.length - 1) { //获取滚动数值
